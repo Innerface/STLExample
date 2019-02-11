@@ -11,8 +11,28 @@
 #include <stack>
 #include <queue>
 #include <deque>
+#include <algorithm>
+#include <fstream>
+#include <cstring>
+#include <io.h>
+#include "md5.h"
 
 using namespace std;
+
+///<summary>
+/// 功能:字符串转字符
+/// 作者:YuYuE
+/// 日期:2019-01-08
+///</summary>   
+char* string2char(string str) {
+	int nStrLength = str.length();
+	char chStr[255];
+	int i;
+	for (i = 0; i < nStrLength; i++)
+		chStr[i] = str[i];
+	chStr[i] = '\0';
+	return chStr;
+}
 
 int testString() {
 	string s1;//初始化字符串，空字符串
@@ -77,6 +97,36 @@ int testVector() {
 	showvector(v5);
 
 	system("pause");
+	return 0;
+}
+
+bool isOdd(int a) {
+	return (a % 2 == 1);
+}
+
+int testVector2() {
+	vector<int> vec;
+	vector<int>::iterator it, it2;
+	for (int i = 0; i < 10; i++) {
+		int a;
+		cin >> a;
+		vec.push_back(a);
+	}
+	cout << "输入要移除的数 ";
+	int n;
+	cin >> n;
+	it = remove(vec.begin(), vec.end(), n); /*将移除n后的vector的迭代器的最后值
+											复制给it*/
+	for (it2 = vec.begin(); it2 != it; it2++) {
+		cout << *it2 << " ";
+	}
+	cout << endl;
+	cout << "紧接着移除奇数" << endl;
+	it2 = it; /*这一步将我们上一步所得的vector传递下来*/
+	it = remove_if(vec.begin(), it2, isOdd);
+	for (it2 = vec.begin(); it2 != it; it2++) {
+		cout << *it2 << " ";
+	}
 	return 0;
 }
 
@@ -266,6 +316,7 @@ int testDeque() {
 int main()
 {
     std::cout << "Hello World!\n"; 
-	testListStack();
+	system("pause");
+	testQueue();
 	return 0;
 }
