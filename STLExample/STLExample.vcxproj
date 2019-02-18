@@ -106,6 +106,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="md5.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="stl_demo.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="md5.cpp" />
@@ -163,9 +165,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="STLExample.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="E:\phpStudy\PHPTutorial\MySQL\lib\libmysql.dll" />
+    <ClCompile Include="stl_demo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

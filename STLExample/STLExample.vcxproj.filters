@@ -21,6 +21,9 @@
     <ClInclude Include="md5.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="stl_demo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -32,8 +35,8 @@
     <ClCompile Include="md5.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="E:\phpStudy\PHPTutorial\MySQL\lib\libmysql.dll" />
+    <ClCompile Include="stl_demo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
